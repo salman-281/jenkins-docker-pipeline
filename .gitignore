@@ -1,14 +1,90 @@
-
-# Node & environment files
+# ==========================================
+# 🌐 General Node.js / JavaScript
+# ==========================================
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
 .env
 .env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# Logs and build outputs
-*.log
+# ==========================================
+# ⚙️ Build and Output Directories
+# ==========================================
 dist/
 build/
+.next/
+out/
+coverage/
+tmp/
+temp/
 
-# OS files
-.DS_Store
+# ==========================================
+# 🐳 Docker Related
+# ==========================================
+.docker/
+docker-compose.override.yml
+*.pid
+*.seed
+*.tar
+*.log
+*.lock
+Dockerfile.old
+docker-compose.backup.yml
+
+# ==========================================
+# 🧩 Frontend (Next.js)
+# ==========================================
+frontend/.next/
+frontend/node_modules/
+frontend/.env*
+frontend/out/
+frontend/coverage/
+frontend/.vercel/
+frontend/.turbo/
+
+# ==========================================
+# ⚙️ Backend (Nest.js)
+# ==========================================
+backend/dist/
+backend/node_modules/
+backend/.env*
+backend/logs/
+backend/coverage/
+backend/*.log
+backend/*.tmp
+
+# ==========================================
+# 🧰 IDE / System Files
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.tmp
+*.DS_Store
 Thumbs.db
+
+# ==========================================
+# 🔐 Jenkins / CI-CD
+# ==========================================
+jenkins_home/
+*.log
+*.tmp
+*.bak
+*.pid
+
+# ==========================================
+# 🧾 Miscellaneous
+# ==========================================
+*.local
+*.lock
+*.cache
+*.log
+!.gitignore
