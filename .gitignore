@@ -1,0 +1,17 @@
+# Ignore local repositories (Jenkins will clone these)
+frontend/
+backend/
+
+# Node & environment files
+node_modules/
+.env
+.env.local
+
+# Logs and build outputs
+*.log
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
