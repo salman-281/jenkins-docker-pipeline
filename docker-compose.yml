@@ -1,0 +1,23 @@
+services:
+  backend:
+    build: ./backend
+    container_name: nest-backend
+    image: docker-jenkins-backend:v1
+    ports:
+      - "5001:5001"
+    environment:
+      - MONGO_URI=mongodb+srv://salman034810_db_user:2v7yYrfkxnBuS42a@cluster0.4rsavwv.mongodb.net/?appName=Cluster0
+      - PORT=5001
+    restart: always
+
+  frontend:
+    build: ./frontend
+    container_name: next-frontend
+    image: docker-jenkins-frontend:v1
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    environment:
+      - NEXT_PUBLIC_API_BASE_URL=http://backend:5001/api/v1
+    restart: always
